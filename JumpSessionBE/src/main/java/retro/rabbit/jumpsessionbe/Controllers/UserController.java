@@ -3,6 +3,7 @@ package retro.rabbit.jumpsessionbe.Controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import retro.rabbit.jumpsessionbe.Models.User;
+import retro.rabbit.jumpsessionbe.Models.UserBooks;
 import retro.rabbit.jumpsessionbe.Services.UserService;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class UserController {
 
     @GetMapping(value = "/get-users")
     public List<User> getUsers() {
-      return userService.getUsers();
+        return userService.getUsers();
     }
 
     @GetMapping(value = "/get-user/{id}")

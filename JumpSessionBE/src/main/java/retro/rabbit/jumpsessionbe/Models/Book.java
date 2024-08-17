@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "\"Books\"")
+@Table(name = "\"books\"")
 public class Book {
     @Id
     private Long id;

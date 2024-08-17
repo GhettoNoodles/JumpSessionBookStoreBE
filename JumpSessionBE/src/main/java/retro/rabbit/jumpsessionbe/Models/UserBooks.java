@@ -9,13 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "userbooks")
+@Table(name = "\"userbooks\"")
 public class UserBooks {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "user_id")
     private Long userId;
+    @Column(name = "book_id")
     private Long bookId;
 
     @Column(name = "checked_out")
