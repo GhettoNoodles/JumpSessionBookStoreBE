@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import retro.rabbit.jumpsessionbe.Models.Admin;
+import retro.rabbit.jumpsessionbe.Models.UserBooks;
 import retro.rabbit.jumpsessionbe.Services.AdminService;
 
 import java.util.List;
@@ -38,7 +39,8 @@ public class AdminControllers {
             adminService.deleteAdmin(id);
             return ResponseEntity.noContent().build();
         }
-
+        @PostMapping("/checkOut")
+        public UserBooks addCheckout(@RequestBody UserBooks userBooks) throws Exception {return adminService.addCheckOut(userBooks);}
           // ToDo: Create assign controller
     }
 
